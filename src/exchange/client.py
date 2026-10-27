@@ -1,8 +1,10 @@
 import os
+
 from dotenv import load_dotenv
 from binance.client import Client
 
 load_dotenv()
+
 
 def get_client() -> Client:
     if os.environ.get("USE_TESTNET", "true") == "true":
